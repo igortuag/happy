@@ -1,4 +1,4 @@
-import { Request, response, Response } from 'express';
+import { Request, Response } from 'express';
 import { getRepository } from 'typeorm';
 import Orphanages from '../models/Orphanage';
 import orphanagesView from '../views/orphanages_view';
@@ -42,6 +42,8 @@ export default {
 
     const requestImages = req.files as Express.Multer.File[];
 
+    console.log(requestImages);
+
     const images = requestImages.map((image) => {
       return { path: image.filename };
     });
@@ -54,6 +56,7 @@ export default {
       instructions,
       opening_hours,
       open_on_weekends,
+      images
     };
 
     const schema = Yup.object().shape({
