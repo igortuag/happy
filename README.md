@@ -124,7 +124,6 @@ $ npm install
 # Execute a aplicação em modo de desenvolvimento
 $ npm run start
 
----
+```
 
 Feito com ❤️ por Igor Tuag 👋 [Entre em contato!](https://www.linkedin.com/in/igortuag/)
-
